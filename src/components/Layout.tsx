@@ -19,7 +19,16 @@ const Layout = ({ children }: Props) => {
       justifyContent="center"
     >
       <Navbar />
-      <Box h="80vh">{children}</Box>
+      <Box
+        h="80vh"
+        w="100%"
+        display="flex"
+        paddingTop={10}
+        alignItems="flex-start"
+        justifyContent="center"
+      >
+        {children}
+      </Box>
       <Footer />
     </Flex>
   );
