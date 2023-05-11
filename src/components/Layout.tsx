@@ -12,7 +12,7 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <Flex
-      h="100vh"
+      minH="100vh"
       w="100%"
       alignItems="center"
       flexDir="column"
@@ -20,7 +20,8 @@ const Layout = ({ children }: Props) => {
     >
       <Navbar />
       <Box
-        h="80vh"
+        // h="80vh"
+        minH="80vh"
         w="100%"
         display="flex"
         paddingTop={10}
