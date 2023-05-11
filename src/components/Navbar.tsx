@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <ButtonGroup variant="link" spacing="8">
       {["Home", "About"].map((item) => {
-        const route = "/" + item.toLowerCase();
+        let route = "/" + item.toLowerCase();
+        if (item === "Home") route = "/";
+
         const isActive = activeRoute === route;
         return (
           <Button

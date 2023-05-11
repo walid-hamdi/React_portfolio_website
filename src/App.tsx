@@ -8,9 +8,9 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </Layout>
     </BrowserRouter>
