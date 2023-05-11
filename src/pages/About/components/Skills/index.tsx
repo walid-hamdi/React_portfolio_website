@@ -1,25 +1,46 @@
-import { HStack, Tag, TagLabel } from "@chakra-ui/react";
+import { Container, Tag, TagLabel } from "@chakra-ui/react";
 
 const Skills = () => {
   const skills = [
     {
-      label: "Develop",
+      label: "React.js",
     },
     {
-      label: "Debug",
+      label: "Front-end development",
     },
     {
-      label: "Deploy",
+      label: "Responsive design",
+    },
+    {
+      label: "User interface (UI) design",
+    },
+    {
+      label: "REST APIs",
+    },
+
+    {
+      label: "Debugging and troubleshooting",
+    },
+    {
+      label: "Unit, integration, and end-to-end testing",
+    },
+
+    {
+      label: "Git/GitHub",
+    },
+    {
+      label: "CI/CD pipelines",
     },
   ];
+
   return (
-    <HStack spacing={4}>
+    <Container textAlign="center">
       {skills.map((skill) => (
-        <Tag size="md" key={skill.label} variant="subtle" colorScheme="cyan">
+        <Tag size="md" m={1} key={skill.label}>
           <TagLabel>{skill.label}</TagLabel>
         </Tag>
       ))}
-    </HStack>
+    </Container>
   );
 };
 

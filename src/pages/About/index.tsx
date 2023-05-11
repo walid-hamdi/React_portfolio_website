@@ -5,9 +5,9 @@ import Skills from "./components/Skills";
 const About = () => {
   return (
     <Flex
-      gap={10}
+      gap={5}
+      mt={7}
       flexDir="column"
-      pt="60px"
       justifyContent="center"
       alignItems="center"
     >

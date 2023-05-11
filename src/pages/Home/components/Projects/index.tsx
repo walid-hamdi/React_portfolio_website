@@ -5,6 +5,7 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
+  Flex,
   Heading,
   IconButton,
   Modal,
@@ -17,6 +18,7 @@ import {
   SimpleGrid,
   Tag,
   TagLabel,
+  Text,
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -70,22 +72,24 @@ const Projects = () => {
               templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
             >
               {projects.map((project) => (
-                <Card bgColor="red" key={project.url}>
+                <Card key={project.url}>
                   <CardHeader>
                     <Heading size="md"> {project.title}</Heading>
                   </CardHeader>
                   <CardBody>
-                    {project.stack.map((item) => (
-                      <Tag
-                        size="md"
-                        margin={1}
-                        key={item}
-                        // variant="subtle"
-                        // colorScheme="cyan"
-                      >
-                        <TagLabel>{item}</TagLabel>
-                      </Tag>
-                    ))}
+                    <Text mb={2}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est, impedit? Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Est, impedit?
+                    </Text>
+                    <Flex gap={2} flexWrap="wrap">
+                      {project.stack.map((item) => (
+                        <Tag size="md" key={item}>
+                          <TagLabel>{item}</TagLabel>
+                        </Tag>
+                      ))}
+                    </Flex>
                   </CardBody>
                   <CardFooter>
                     <Button onClick={() => window.open(project.url, "_blank")}>

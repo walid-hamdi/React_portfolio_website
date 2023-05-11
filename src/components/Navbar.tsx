@@ -1,18 +1,24 @@
 import { Button, ButtonGroup } from "@chakra-ui/react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [activeRoute, setActiveRoute] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (activeRoute === "") setActiveRoute(location.pathname);
+  }, [location]);
 
   return (
     <ButtonGroup variant="link" spacing="8">
-      {["HOME", "ABOUT"].map((item) => {
+      {["Home", "About"].map((item) => {
         const route = "/" + item.toLowerCase();
         const isActive = activeRoute === route;
         return (
           <Button
+            marginTop={4}
             className={isActive ? "active-button" : ""}
             onClick={() => {
               navigate(route);
