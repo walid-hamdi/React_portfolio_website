@@ -36,7 +36,7 @@ const Skills = () => {
   return (
     <Container textAlign="center">
       {skills.map((skill) => (
-        <Tag size="md" m={1} key={skill.label}>
+        <Tag colorScheme="yellow" size="md" m={1} key={skill.label}>
           <TagLabel>{skill.label}</TagLabel>
         </Tag>
       ))}

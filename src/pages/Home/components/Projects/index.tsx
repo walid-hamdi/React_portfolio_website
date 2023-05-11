@@ -22,7 +22,7 @@ import {
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
-import { SiCreatereactapp } from "react-icons/si";
+import { BsCodeSlash } from "react-icons/bs";
 
 const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -54,14 +54,16 @@ const Projects = () => {
       <Tooltip label="React Projects">
         <Box>
           <IconButton
+            colorScheme="yellow"
+            variant="outline"
             onClick={() => onOpen()}
             aria-label="Projects"
             size="sm"
-            icon={<SiCreatereactapp />}
+            icon={<BsCodeSlash size={15} />}
           />
         </Box>
       </Tooltip>
-      <Modal onClose={onClose} size="2xl" isOpen={isOpen}>
+      <Modal onClose={onClose} size="full" isOpen={isOpen} colorScheme="red">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Projects</ModalHeader>
@@ -69,7 +71,7 @@ const Projects = () => {
           <ModalBody>
             <SimpleGrid
               spacing={4}
-              templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+              templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
             >
               {projects.map((project) => (
                 <Card key={project.url}>

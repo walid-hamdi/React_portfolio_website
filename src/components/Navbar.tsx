@@ -4,11 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [activeRoute, setActiveRoute] = useState("");
+  const [activeRoute, setActiveRoute] = useState("/");
   const location = useLocation();
 
   useEffect(() => {
-    if (activeRoute === "") setActiveRoute(location.pathname);
+    setActiveRoute(location.pathname);
   }, [location]);
 
   return (

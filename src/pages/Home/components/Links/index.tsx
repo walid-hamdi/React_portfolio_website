@@ -5,17 +5,17 @@ const Links = () => {
   const links = [
     {
       label: "LinkedIn",
-      icon: <BsLinkedin />,
+      icon: <BsLinkedin size={15} />,
       url: "https://www.linkedin.com/in/hamdiwalid",
     },
     {
       label: "GitHub",
-      icon: <BsGithub />,
+      icon: <BsGithub size={15} />,
       url: "https://github.com/walidhamdidev",
     },
     {
       label: "YouTutbe",
-      icon: <BsYoutube />,
+      icon: <BsYoutube size={15} />,
       url: "https://www.youtube.com/@walidhamdidev",
     },
   ];
@@ -24,6 +24,8 @@ const Links = () => {
       {links.map((link) => (
         <Box key={link.label}>
           <IconButton
+            colorScheme="gray"
+            variant="outline"
             onClick={() => window.open(link.url, "_blank")}
             aria-label={link.label}
             size="sm"
