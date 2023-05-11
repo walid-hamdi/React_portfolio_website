@@ -13,7 +13,7 @@ const Header = () => {
           Hey, I'm Walid
         </Heading>
         <Heading py={2} size="md" as="h4">
-          A React Developer.
+          React Developer.
         </Heading>
       </Box>
     </>
