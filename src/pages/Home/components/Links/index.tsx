@@ -1,6 +1,5 @@
-import { Box, HStack, IconButton, Tooltip } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsYoutube } from "react-icons/bs";
-import { SiCreatereactapp } from "react-icons/si";
 
 const Links = () => {
   const links = [
@@ -21,7 +20,7 @@ const Links = () => {
     },
   ];
   return (
-    <HStack gap={3}>
+    <>
       {links.map((link) => (
         <Box key={link.label}>
           <IconButton
@@ -32,18 +31,7 @@ const Links = () => {
           />
         </Box>
       ))}
-
-      <Tooltip label="React Projects">
-        <Box>
-          <IconButton
-            onClick={() => alert("React Projects")}
-            aria-label="Projects"
-            size="sm"
-            icon={<SiCreatereactapp />}
-          />
-        </Box>
-      </Tooltip>
-    </HStack>
+    </>
   );
 };
 
