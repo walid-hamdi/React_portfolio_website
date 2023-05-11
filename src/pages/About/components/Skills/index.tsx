@@ -11,9 +11,9 @@ const Skills = () => {
     {
       label: "Responsive design",
     },
-    {
-      label: "User interface (UI) design",
-    },
+    // {
+    //   label: "User interface (UI) design",
+    // },
     {
       label: "REST APIs",
     },
