@@ -160,15 +160,15 @@ const Projects = () => {
           <ModalBody>
             <SimpleGrid
               spacing={4}
-              templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+              templateColumns="repeat(auto-fill, minmax(400px, 1fr))"
             >
               {projects.map((project) => (
                 <Card key={project.url} variant="outline">
                   <CardHeader>
                     <Heading size="md"> {project.title}</Heading>
                   </CardHeader>
-                  <CardBody>
-                    <Text mb={2}>{project.description}</Text>
+                  <CardBody lineHeight={7}>
+                    <Text mb={5}>{project.description}</Text>
                     <Flex gap={2} flexWrap="wrap">
                       {project.stack.map((item) => (
                         <Tag size="lg" key={item}>
