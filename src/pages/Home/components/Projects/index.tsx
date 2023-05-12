@@ -34,108 +34,45 @@ const Projects = () => {
       stack: ["React.js", "Chakra UI", "TypeScript", "Rawg API", "Zustand"],
       url: "https://game-hub-ivory-one.vercel.app/",
     },
-    // {
-    //   title: "Workout",
-    //   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    //   Est, impedit? Lorem ipsum dolor sit amet consectetur
-    //   adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
-    //   consectetur adipisicing elit. Est, impedit?`,
-
-    //   stack: ["React.js", "Node.js", "Mongodb", "Express.js", "TailwindCSS"],
-    //   url: "https://workout-frontend-1und.onrender.com/",
-    // },
-    // {
-    //   title: "Blogpost",
-    //   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    //   Est, impedit? Lorem ipsum dolor sit amet consectetur
-    //   adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
-    //   consectetur adipisicing elit. Est, impedit?`,
-
-    //   stack: ["Angular", "Node.js", "Express.js", "Mongodb", "BootStrap"],
-    //   url: "https://mean-blogpost.vercel.app/",
-    // },
-    // {
-    //   title: "Discord clone",
-    //   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    //   Est, impedit? Lorem ipsum dolor sit amet consectetur
-    //   adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
-    //   consectetur adipisicing elit. Est, impedit?`,
-
-    //   stack: [
-    //     "React.js",
-    //     "Node.js",
-    //     "Material UI",
-    //     "Express.js",
-    //     "WebRTC",
-    //     "Socket.io",
-    //     "Mongodb",
-    //     "Redux toolkit",
-    //   ],
-    //   url: "",
-    // },
     {
-      title: "Fin around",
-      description: `Allows users to discover nearby coffee shops, restaurants, and other places of interest. Using location data, it provides real-time search results and interactive maps for a seamless user experience. The project is built using modern web technologies and follows best practices for performance and scalability.`,
+      title: "Workout",
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Est, impedit? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Est, impedit?`,
 
-      stack: ["Next.js", "Airtable", "Location", "CSS module"],
-      url: "https://findaround.vercel.app/",
+      stack: ["React.js", "Node.js", "Mongodb", "Express.js", "TailwindCSS"],
+      url: "https://workout-frontend-1und.onrender.com/",
     },
     {
-      title: "Netflix clone",
-      description: `This Netflix clone built with Next.js features seamless video streaming, Magic authentication, and CSS modules for styling. Users can browse and search for movies and TV shows, create watchlists, and resume playback across devices. The app is optimized for performance and follows best practices for scalability, ensuring a smooth user experience.`,
+      title: "Blogpost",
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Est, impedit? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Est, impedit?`,
 
-      stack: ["Next.js", "Magic Auth", "YouTube API", "CSS Module"],
-      url: "https://streamingvideos.vercel.app/",
+      stack: ["Angular", "Node.js", "Express.js", "Mongodb", "BootStrap"],
+      url: "https://mean-blogpost.vercel.app/",
     },
     {
-      title: "The new tunisia",
-      description: `Empower citizens with a web app integrating multiple sector communication systems, with a voice platform for opinions & insights using ML. Real-time data to decision-makers for a more informed, engaged and responsive society in Tunisia.`,
+      title: "Real time communication",
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Est, impedit? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Est, impedit?`,
 
       stack: [
-        "Next.js",
-        "Context API",
-        "Styled Components",
-        "Peer.js",
-        "Firebase",
+        "React.js",
+        "Node.js",
+        "Material UI",
+        "Express.js",
+        "WebRTC",
+        "Socket.io",
+        "Mongodb",
+        "Redux toolkit",
       ],
-      url: "https://thenewtunisia.vercel.app/",
+      url: "",
     },
-    // {
-    //   title: "Movies rental",
-    //   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    //   Est, impedit? Lorem ipsum dolor sit amet consectetur
-    //   adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
-    //   consectetur adipisicing elit. Est, impedit?`,
-
-    //   stack: ["React.js", "Strapi", "Context API", "Sentry", "TailwindCSS"],
-    //   url: "rental-movies.vercel.app/movies",
-    // },
-    {
-      title: "Shopify e-commerce",
-      description: `E-commerce platform! Designed specifically for Shopify stores, this platform seamlessly integrates with your existing store to deliver an enhanced shopping experience to your customers. Built with TailwindCSS, GraphQL, and the Context API, this platform is fast, modern, and user-friendly. With a clean and responsive design.`,
-
-      stack: [
-        "Next.js",
-        "Context API",
-        "Shopify API",
-        "TailwindCSS",
-        "GraphQL",
-      ],
-      url: "https://injestic.vercel.app/",
-    },
-    // {
-    //   title: "Sell it",
-    //   description: `E-commerce platform! Designed specifically for Shopify stores, this platform seamlessly integrates with your existing store to deliver an enhanced shopping experience to your customers. Built with TailwindCSS, GraphQL, and the Context API, this platform is fast, modern, and user-friendly. With a clean and responsive design.`,
-
-    //   stack: [
-    //     "React Native",
-    //     "Context API",
-    //     "Shopify API",
-    //     "TailwindCSS",
-    //     "GraphQL",
-    //   ],
-    //   url: "https://injestic.vercel.app/",
-    // },
   ];
 
   return (
@@ -160,7 +97,18 @@ const Projects = () => {
           <ModalBody>
             <SimpleGrid
               spacing={4}
-              templateColumns="repeat(auto-fill, minmax(400px, 1fr))"
+              templateColumns="repeat(auto-fill, minmax(100%, 1fr))"
+              sx={{
+                "@media (min-width: 480px)": {
+                  gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
+                },
+                "@media (min-width: 768px)": {
+                  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                },
+                "@media (min-width: 1024px)": {
+                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                },
+              }}
             >
               {projects.map((project) => (
                 <Card key={project.url} variant="outline">
