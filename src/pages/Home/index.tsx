@@ -5,13 +5,13 @@ import Projects from "./components/Projects";
 
 const Home = () => {
   return (
-    <HStack flexDir="column">
+    <>
       <Header />
       <HStack gap={3}>
         <Links />
         <Projects />
       </HStack>
-    </HStack>
+    </>
   );
 };
 
