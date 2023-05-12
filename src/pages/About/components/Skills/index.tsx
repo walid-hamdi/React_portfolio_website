@@ -1,4 +1,4 @@
-import { Box, Tag, TagLabel } from "@chakra-ui/react";
+import {  Container, Tag, TagLabel } from "@chakra-ui/react";
 
 const Skills = () => {
   const skills = [
@@ -25,13 +25,13 @@ const Skills = () => {
   ];
 
   return (
-    <Box textAlign="center" mt={4}>
+    <Container  textAlign="center" mt={4}>
       {skills.map((skill) => (
         <Tag colorScheme="yellow" size="md" m={1} key={skill.label}>
           <TagLabel>{skill.label}</TagLabel>
         </Tag>
       ))}
-    </Box>
+    </Container>
   );
 };
 

@@ -17,11 +17,14 @@ const Layout = ({ children }: Props) => {
       alignItems="center"
       flexDir="column"
       justifyContent="space-between"
-      p={3}
     >
-      <Navbar />
+      <Box my={10}>
+        <Navbar />
+      </Box>
       <Box my={6}>{children}</Box>
-      <Footer />
+      <Box my={6}>
+        <Footer />
+      </Box>
     </Flex>
   );
 };

@@ -2,7 +2,7 @@ import { Container, Text } from "@chakra-ui/react";
 
 const Header = () => {
   return (
-    <Container textAlign="center">
+    <Container textAlign="center" mt={{ base: 0, md: "-28" }}>
       <Text pb={2}>
         As an experienced React developer, I am confident in developing,
         debugging, and deploying high-quality web and mobile applications.

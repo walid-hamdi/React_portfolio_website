@@ -26,13 +26,40 @@ import { BsCodeSlash } from "react-icons/bs";
 
 const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const projects = [
+  const projects: {
+    title: string;
+    description: string;
+    stack: string[];
+    url: string;
+    production?: boolean;
+  }[] = [
     {
       title: "Game Hub",
       description: `Developed a Rawg clone using React hooks for state management, Chakra UI for styling, React Query for API data fetching and caching, and Zustand for global state management. Implemented features such as game search, sorting games by, getting games by platform, displaying genres, and game profile details.`,
 
       stack: ["React.js", "Chakra UI", "TypeScript", "Rawg API", "Zustand"],
       url: "https://game-hub-ivory-one.vercel.app/",
+    },
+    {
+      // production: true,
+      title: "Real time communication",
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Est, impedit? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Est, impedit? st, impedit?st, impedit?`,
+
+      stack: [
+        "React.js",
+        "Node.js",
+        "Material UI",
+        "Express.js",
+        "WebRTC",
+        "Socket.io",
+        "Mongodb",
+        "Redux toolkit",
+      ],
+      url: "",
     },
     {
       title: "Workout",
@@ -54,25 +81,6 @@ const Projects = () => {
       stack: ["Angular", "Node.js", "Express.js", "Mongodb", "BootStrap"],
       url: "https://mean-blogpost.vercel.app/",
     },
-    {
-      title: "Real time communication",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Est, impedit? Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Est, impedit? Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Est, impedit?`,
-
-      stack: [
-        "React.js",
-        "Node.js",
-        "Material UI",
-        "Express.js",
-        "WebRTC",
-        "Socket.io",
-        "Mongodb",
-        "Redux toolkit",
-      ],
-      url: "",
-    },
   ];
 
   return (
@@ -89,7 +97,7 @@ const Projects = () => {
           />
         </Box>
       </Tooltip>
-      <Modal onClose={onClose} size="full" isOpen={isOpen}>
+      <Modal onClose={onClose} size="3xl" isOpen={isOpen}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Side projects</ModalHeader>
@@ -105,13 +113,14 @@ const Projects = () => {
                 "@media (min-width: 768px)": {
                   gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
                 },
-                "@media (min-width: 1024px)": {
-                  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                },
               }}
             >
               {projects.map((project) => (
-                <Card key={project.url} variant="outline">
+                <Card
+                  key={project.url}
+                  variant="outline"
+                  bgColor={project?.production ? "purple" : ""}
+                >
                   <CardHeader>
                     <Heading size="md"> {project.title}</Heading>
                   </CardHeader>
