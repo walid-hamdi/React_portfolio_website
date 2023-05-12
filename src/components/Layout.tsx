@@ -16,17 +16,19 @@ const Layout = ({ children }: Props) => {
       w="100%"
       alignItems="center"
       flexDir="column"
-      justifyContent="center"
+      justifyContent="space-between"
+      // padding={4}
+      p={8}
     >
       <Navbar />
       <Box
-        // h="80vh"
-        minH="80vh"
-        w="100%"
-        display="flex"
-        paddingTop={10}
-        alignItems="flex-start"
-        justifyContent="center"
+      // // h="80vh"
+      // minH="80vh"
+      // w="100%"
+      // display="flex"
+      // paddingTop={10}
+      // alignItems="flex-start"
+      // justifyContent="center"
       >
         {children}
       </Box>

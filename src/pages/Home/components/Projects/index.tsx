@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Game Hub",
       description: `Developed a Rawg clone using React hooks for state management, Chakra UI for styling, React Query for API data fetching and caching, and Zustand for global state management. Implemented features such as game search, sorting games by, getting games by platform, displaying genres, and game profile details.`,
 
-      stack: ["React.js", "TypeScript", "Rawg API", "Zustand"],
+      stack: ["React.js", "Chakra UI", "TypeScript", "Rawg API", "Zustand"],
       url: "https://game-hub-ivory-one.vercel.app/",
     },
     // {
