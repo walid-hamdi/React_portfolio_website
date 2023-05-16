@@ -11,12 +11,12 @@ const Links = () => {
     {
       label: "GitHub",
       icon: <BsGithub size={15} />,
-      url: "https://github.com/walidhamdidev",
+      url: "https://github.com/walid-hamdi",
     },
     {
       label: "YouTutbe",
       icon: <BsYoutube size={15} />,
-      url: "https://www.youtube.com/@walidhamdidev",
+      url: "https://www.youtube.com/@walid-hamdi",
     },
   ];
   return (

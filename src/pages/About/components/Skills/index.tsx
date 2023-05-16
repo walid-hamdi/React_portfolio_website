@@ -1,31 +1,34 @@
-import {  Container, Tag, TagLabel } from "@chakra-ui/react";
+import { Container, Tag, TagLabel } from "@chakra-ui/react";
 
 const Skills = () => {
   const skills = [
     {
-      label: "React",
+      label: "Dart",
     },
     {
-      label: "React Native",
+      label: "Flutter",
+    },
+    {
+      label: "Design Patterns",
     },
 
     {
-      label: "REST APIs",
+      label: "REST APIs Integration",
     },
 
     {
-      label: "Debugging and troubleshooting",
+      label: "Debugging and Troubleshooting",
     },
     {
-      label: "Unit, integration, and end-to-end testing",
+      label: "Unit, Widget and Integration Testing",
     },
     {
-      label: "CI/CD pipelines",
+      label: "CI/CD Pipelines",
     },
   ];
 
   return (
-    <Container  textAlign="center" mt={4}>
+    <Container textAlign="center" mt={4}>
       {skills.map((skill) => (
         <Tag colorScheme="yellow" size="md" m={1} key={skill.label}>
           <TagLabel>{skill.label}</TagLabel>

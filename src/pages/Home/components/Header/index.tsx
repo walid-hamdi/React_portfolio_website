@@ -1,6 +1,6 @@
 import { Avatar, Box, Heading } from "@chakra-ui/react";
 
-import profile from "../../../../assets/porfile.png";
+import profile from "../../../../assets/profile.jpg";
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
             Hey, I'm Walid
           </Heading>
           <Heading py={2} size="md" as="h4">
-            React Developer.
+            Flutter Developer.
           </Heading>
         </Box>
       </Box>
