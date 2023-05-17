@@ -3,10 +3,7 @@ import { Container, Tag, TagLabel } from "@chakra-ui/react";
 const Skills = () => {
   const skills = [
     {
-      label: "Dart",
-    },
-    {
-      label: "Flutter",
+      label: "Dart/Flutter",
     },
     {
       label: "Design Patterns",
@@ -15,6 +12,9 @@ const Skills = () => {
     {
       label: "REST APIs Integration",
     },
+{
+label:"MERN Stack"
+},
 
     {
       label: "Debugging and Troubleshooting",
