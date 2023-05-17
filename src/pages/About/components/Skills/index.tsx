@@ -12,11 +12,12 @@ const Skills = () => {
     {
       label: "REST APIs Integration",
     },
-{
-label:"MERN Stack"
-},
 
     {
+     label: "MERN Stack",
+     },
+
+{
       label: "Debugging and Troubleshooting",
     },
     {
